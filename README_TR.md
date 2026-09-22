@@ -1,7 +1,7 @@
 # Klasik ESP32'de TinyLLM — PSRAM Yok
 
-Bu proje, 260 bin parametreli TinyStories dil modelini harici PSRAM bulunmayan
-klasik ESP32/ESP-32S kartta tamamen çevrimdışı çalıştırır.
+Bu projede, 260 bin parametreli TinyStories dil modelini harici PSRAM bulunmayan
+klasik ESP32/ESP-32S kartta tamamen çevrimdışı çalıştırıyorum.
 
 Bu bir ChatGPT alternatifi değildir. Kısa İngilizce çocuk hikâyeleri üretmek
 için eğitilmiş, çok küçük ve deneysel bir modeldir. Wi-Fi, bulut servisi, API,
@@ -14,14 +14,19 @@ kullanıyor. Bu sürümde model flash bellekte tutuluyor, Q8_0 biçiminde
 küçültülüyor ve 64 tokenlık sınırlı bir çalışma belleği kullanılıyor. Böylece
 yaygın klasik ESP32 kartta Arduino IDE üzerinden çalışabiliyor.
 
-Bu proje, gömülü sistemler ve makine öğrenmesi konusunda çok az deneyimle
-başlayan bir öğrenme çalışmasıdır. Geliştirme ve hata ayıklama sırasında yapay
-zekâ araçlarından destek alınmıştır. Amaç, her şeyi sıfırdan icat etmiş gibi
-görünmek değil; çalışan, doğrulanmış ve başka birinin tekrarlayabileceği bir yol
-bırakmaktır.
+Bu projeye pratik bir soruyla başladım: Gerçek bir dil modeli, yaygın olarak
+bulunan ve PSRAM içermeyen klasik bir ESP32 üzerinde yerel olarak çalışabilir
+mi? Mevcut açık kaynak çalışmalardan yararlanarak bellek kullanımına dikkat
+eden, test edilmiş, belgelenmiş ve başkalarının da uygulayabileceği bir Arduino
+çözümü hazırladım.
 
-Projenin geliştiricisi ve sürdürücüsü:
-[@serenustaken](https://github.com/serenustaken).
+Araştırma, uygulama, hata ayıklama ve belgelendirme süreçlerinin bazı
+bölümlerinde yapay zekâ araçlarından yararlandım. Sistemin tamamını derledim,
+fiziksel karta yükledim ve gerçek donanım üzerinde doğruladım. Bu projeyle
+pratik entegrasyona, tekrarlanabilirliğe ve gömülü yapay zekâyı daha erişilebilir
+hâle getirmeye odaklanıyorum.
+
+Projeyi [@serenustaken](https://github.com/serenustaken) olarak sürdürüyorum.
 
 ## Doğrulanan değerler
 
