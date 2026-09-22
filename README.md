@@ -1,23 +1,23 @@
 # TinyLLM on a Classic ESP32 — No PSRAM
 
-Run a real, fully offline 260K-parameter TinyStories Transformer on a classic
+I run a real, fully offline 260K-parameter TinyStories Transformer on a classic
 ESP32/ESP-32S development board with **no external PSRAM**.
 
 This is a small educational text generator, not a general-purpose chatbot. It
 continues short English story prompts directly on the microcontroller. No Wi-Fi,
 cloud API, SD card, or external server is required.
 
-> This began as a beginner learning project and was developed with AI-assisted
-> implementation and debugging. The goal of publishing it is to leave behind a
-> reproducible path for other curious makers. See [Project story](#project-story)
-> and [Credits](#credits) for full attribution.
+> I started this project with a practical question: can a real language model
+> run locally on a widely available classic ESP32 without PSRAM? I am publishing
+> the working result so other curious makers can reproduce it and build on it.
+> See [Project story](#project-story) and [Credits](#credits) for full attribution.
 
-Maintained by [@serenustaken](https://github.com/serenustaken).
+I maintain this project as [@serenustaken](https://github.com/serenustaken).
 
 ## Why this is interesting
 
 Existing ESP32 LLM demonstrations commonly target an ESP32-S3 with external
-PSRAM. This version takes a different route for the widely available classic
+PSRAM. I took a different route for the widely available classic
 ESP32:
 
 - model weights stay in flash instead of being copied to RAM;
@@ -50,8 +50,8 @@ The exact compile totals can vary slightly with the ESP32 Arduino core version.
 - Arduino IDE with the Espressif ESP32 board package installed;
 - this repository.
 
-The tested board is the common 30-pin ESP-32S development board. ESP32-S3 is
-not required.
+I tested the project on the common 30-pin ESP-32S development board. ESP32-S3
+is not required.
 
 ## Quick start
 
@@ -163,17 +163,15 @@ tok512.bin           037cb335abb25d1fa9e8ecae30ed2a3a8ace9302862ebcdc05d51a6bbb1
 
 ## Project story
 
-[@serenustaken](https://github.com/serenustaken) started with almost no embedded-systems or machine-learning
-experience and a simple question: can a real language model run locally on the
-common ESP32 board already on the desk? Existing open-source projects provided
-the foundation; careful memory budgeting, quantization, adaptation, testing,
-and documentation turned that question into a reproducible Arduino project.
+I started this project with a practical question: can a real language model run
+locally on a widely available classic ESP32 without PSRAM? Building on existing
+open-source work, I adapted, tested, and documented a memory-conscious Arduino
+implementation that others can reproduce.
 
-AI tools assisted with research, implementation, conversion scripts,
-debugging, and documentation. Hardware flashing and runtime behavior were
-verified on the physical board. This disclosure is intentional: the value of
-the project is the tested integration and the path it gives the next learner,
-not a claim that every underlying technique was invented here.
+I used AI tools to support parts of the research, implementation, debugging,
+and documentation process. I compiled the complete system, flashed it, and
+verified it on physical hardware. My focus is practical integration,
+reproducibility, and making embedded AI more approachable.
 
 ## Credits
 
