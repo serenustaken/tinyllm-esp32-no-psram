@@ -1,0 +1,13 @@
+.DS_Store
+*.bin
+*.elf
+*.map
+build/
+__pycache__/
+*.pyc
+.venv/
+
+# Generated model headers are intentionally tracked because they make the
+# Arduino sketch ready to compile immediately.
+!tinyllm_esp32_no_psram/model_data.h
+!tinyllm_esp32_no_psram/tokenizer_data.h
